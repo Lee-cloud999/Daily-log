@@ -1,4 +1,4 @@
-Daily Priority PWA
+Daily Log PWA
 
 GitHub 저장소 루트에 아래 파일을 모두 업로드하세요.
 - index.html

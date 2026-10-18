@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Daily Priority · Offline Prototype v2</title>
+<title>Daily Log</title>
 <style>
 :root{--bg:#f6f4ef;--paper:#fffefa;--ink:#272724;--muted:#8d8a82;--line:#dedbd3;--pink:#f4e5e3;--yellow:#f5ecd8;--blue:#e5edf3;--green:#e7eee2}
 *{box-sizing:border-box}html,body,body *,button,input,textarea{font-family:Georgia,"Times New Roman",serif}body{margin:0;background:var(--bg);color:var(--ink)}
@@ -319,7 +319,7 @@ button,input,textarea,select{-webkit-appearance:none}
 </style>
 <meta name="theme-color" content="#f6f4ef">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="우선순위">
+<meta name="apple-mobile-web-app-title" content="Daily Log">
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/MaruBuri/MaruBuri.css">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=38c">
@@ -329,8 +329,8 @@ button,input,textarea,select{-webkit-appearance:none}
 <div id="syncDiag" class="sync-diag" hidden>
  <div class="sync-diag-head"><b>동기화 진단</b><button id="syncDiagClose" type="button">닫기</button></div>
  <div id="syncDiagBody">확인 중…</div>
-</div><div class="legacy-recovery-note"></div><header class="top"><div class="title">DAILY PRIORITY</div><div class="rule"></div><div class="date"><button id="prevProto" style="border:0;background:transparent">‹</button><span id="protoDate">2026. 09. 26 (토)</span><button id="nextProto" style="border:0;background:transparent">›</button></div></header>
-<div class="focus"><span>FOCUS</span><input placeholder="오늘 가장 집중하고 싶은 것"></div>
+</div><div class="legacy-recovery-note"></div><header class="top"><div class="title">DAILY LOG</div><div class="rule"></div><div class="date"><button id="prevProto" style="border:0;background:transparent">‹</button><span id="protoDate">2026. 09. 26 (토)</span><button id="nextProto" style="border:0;background:transparent">›</button></div></header>
+<div class="focus"><span>HIGHLIGHTS</span><input placeholder="오늘 가장 집중하고 싶은 것"></div>
 <section class="matrix">
 <div class="quad q1"><div class="qhead"><div class="head-copy"><b>집안일</b><small>오늘 집에서 할 일</small></div><button class="section-add head-add" data-target="house">＋</button></div><div class="items" id="house"></div></div>
 <div class="quad q2"><div class="qhead"><div class="head-copy"><b>육아</b><small>아이들과 관련된 일</small></div><button class="section-add head-add" data-target="kids">＋</button></div><div class="items" id="kids"></div></div>
@@ -351,14 +351,14 @@ button,input,textarea,select{-webkit-appearance:none}
 <div class="meal-row"><span class="meal-label">저녁</span><textarea class="auto" rows="1" placeholder="저녁 식사"></textarea></div>
 <div class="memo-title">메모</div><textarea class="memo" rows="1" placeholder="그 밖의 기록"></textarea>
 </div></div></section>
-<div class="footer">A MORE FOCUSED DAY</div>
+<div class="footer">Every little step counts.</div>
 </main>
 <main class="paper legacy-snapshot" id="legacyView" style="display:none">
  <div class="sync-mini"><span class="sync-dot on"></span><span>과거 기록 · 원본 보존</span></div>
- <header class="top"><div class="title">DAILY PRIORITY</div><div class="rule"></div>
+ <header class="top"><div class="title">DAILY LOG</div><div class="rule"></div>
   <div class="date"><button id="legacyPrev" type="button">‹</button><span id="legacyDate"></span><button id="legacyNext" type="button">›</button></div>
  </header>
- <div class="focus"><span>FOCUS</span><div class="legacy-focus" id="legacyFocus"></div></div>
+ <div class="focus"><span>HIGHLIGHTS</span><div class="legacy-focus" id="legacyFocus"></div></div>
  <section class="matrix">
   <div class="quad q1"><div class="qhead"><div class="head-copy"><b>집안일</b><small>오늘 집에서 할 일</small></div></div><div class="items" id="legacyHouse"></div></div>
   <div class="quad q2"><div class="qhead"><div class="head-copy"><b>육아</b><small>아이들과 관련된 일</small></div></div><div class="items" id="legacyKids"></div></div>
@@ -369,7 +369,7 @@ button,input,textarea,select{-webkit-appearance:none}
   <div class="box legacy-extra"><div class="legacy-box-title">EXTRA</div><div class="items" id="legacyExtra"></div></div>
   <div class="box legacy-notes"><div class="legacy-box-title">NOTES &nbsp;|&nbsp; 메모</div><div class="legacy-notes-text" id="legacyNotes"></div></div>
  </section>
- <div class="footer">A MORE FOCUSED DAY</div>
+ <div class="footer">Every little step counts.</div>
 </main>
 </div>
 <section id="archiveView" style="display:none;max-width:980px;margin:0 auto;padding:18px 26px 90px">

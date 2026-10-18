@@ -1,6 +1,6 @@
 {
-  "name": "Daily Priority",
-  "short_name": "우선순위",
+  "name": "Daily Log",
+  "short_name": "Daily Log",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#f6f2eb",
